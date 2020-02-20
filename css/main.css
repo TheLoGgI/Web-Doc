@@ -1,0 +1,96 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Eagle Lake', cursive;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background-color: orangered;
+  width: 100%;
+  /* margin-bottom: 200px; */
+}
+
+.hero h1 {
+  font-family: 'Eagle Lake', cursive;
+  color: white;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  position: absolute;
+
+}
+
+.hero video {
+  display: block;
+  height: 100vh;
+  margin: 0 auto;
+
+}
+
+.paralax {
+  width: 100%;
+  height: 600px;  
+  background: url("../img/tomato.jpg") no-repeat fixed center ;
+  background-size: 100%;
+}
+
+#mustafa {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+  padding: 2em;
+  margin: 4em auto;
+  background-color: brown;
+}
+
+#mustafa video {
+  width: 600px;
+}
+
+.tekst {
+  padding: 1em;
+  padding-top: 0;
+  margin-left: 2em;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  background-color: lightcyan;
+}
+
+/* Udtalser */
+.interviews {
+  text-align: center;
+  padding: 4em;
+}
+
+.kunderne {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.kunde {
+  width: 20%;
+  margin: auto;
+}
+
+.kunde img {
+  margin-bottom: 2em;
+}
+
+.interviews img {
+  width: 50%;
+  border-radius: 50%;
+}
+
+
+
+
