@@ -15,28 +15,36 @@
 
         <div class="hero">
 
-            <h1>Nordisk frugt og grønt</h1>
-            <video src="video/frontShow.mp4" controls></video>
+            <div>
+                <p>Velkommen til</p>
+                <h1>Nordisk Frugt og Grønt</h1>
+                <p>I Bazar Vest Aarhus</p>
+            </div>
+            <video src="video/frontShow.mp4" autoplay muted loop></video>
 
         </div>
-        
 
-        <section class="stretch">
+
+        <section class="interview">
             <article class="between" id="mustafa">
 
-                <video src="video/interview.mp4" id="video" controls class="video mustafa"></video>
+                <video src="video/interview.mp4" controls class="video mustafa"></video>
                 <div class="tekst">
-                    <h3>Mustafa</h3>
+
+                    <h3>Interview med Mustafa</h3>
                     <p>I Nordisk frugt og grønt finder du Mustafa, som har været med lige siden butikken
-                        åbnede i 2003 (?) </p>
+                        åbnede i 2003. <br>
+                        Han står for butikkens daglige drift og handler ind til butikken via hans brors angro firma.
+                    </p>
                 </div>
             </article>
         </section>
 
+        <video src="video/interview.mp4" id="video" controls></video>
         <div class="paralax"></div>
 
 
-        <article class="interviews" id="interviews">
+        <article class="bruger-interviews">
             <h1>Kunderne siger</h1>
             <div class="kunderne">
                 <div class="kunde one">
@@ -71,6 +79,7 @@
             </div>
         </article>
 
+        <!-- <div class="sample"></div> -->
         <div class="slideshow-container">
 
             <div class="mySlides fade">
@@ -93,7 +102,7 @@
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          
+
             <div class="controls-slide">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -101,11 +110,10 @@
             </div>
         </div>
 
-        </div>
 
         <div id="til-top">
             <a href="#top">TIL TOP</a>
-            </div>
+        </div>
         <script src="js/main.js"></script>
     </main>
 </body>

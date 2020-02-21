@@ -26,10 +26,18 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+setInterval(function() {  
+  plusSlides(1)
+}, 5000)
 
-const knap = document.getElementById('til-top').addEventListener('click', function() {
-    
-    // window.scrollTo(0, 0)
-    
+
+  const hero = document.querySelector('.hero')
+  const video = document.querySelector('#video')
+  const article = document.querySelector('article')
+
+window.addEventListener('scroll', function(e) {
+  window.pageYOffset >= window.innerHeight ?  hero.style.position="static" : hero.style.position = "sticky"
+  // window.pageYOffset >= window.innerHeight ?  hero.style.position="absolute" : hero.style.position = "sticky"
   
+
 })
