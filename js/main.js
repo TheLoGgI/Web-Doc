@@ -26,18 +26,28 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+
+// Slide Show timer
 setInterval(function() {  
   plusSlides(1)
 }, 5000)
 
-
+// Hide hero video
   const hero = document.querySelector('.hero')
-  const video = document.querySelector('#video')
-  const article = document.querySelector('article')
+window.addEventListener('scroll', _ => window.pageYOffset >= window.innerHeight ?  hero.style.position="static" : hero.style.position = "sticky" )
 
-window.addEventListener('scroll', function(e) {
-  window.pageYOffset >= window.innerHeight ?  hero.style.position="static" : hero.style.position = "sticky"
-  // window.pageYOffset >= window.innerHeight ?  hero.style.position="absolute" : hero.style.position = "sticky"
+// Video play
+const playKnap = document.querySelector('.paralax button')
+const video = document.querySelector('#video')
+
+playKnap.addEventListener('click', event => {
+  console.log(video.paused);
+  if (video.paused) {
+    video.play()
+    playKnap.textContent = '⏸'
+  } else {
+    video.pause()
+    playKnap.textContent = '►'
+  }
   
-
 })
