@@ -35,9 +35,9 @@ setInterval(function() {
 // Hide hero video
   const hero = document.querySelector('.hero')
   const video = document.querySelector('#video')
-  
+
   window.addEventListener('scroll', _ => window.pageYOffset >= window.innerHeight ?  hero.style.position="static" : hero.style.position = "sticky" )
-  window.addEventListener('scroll', _ => window.pageYOffset >= window.innerHeight ?  hero.style.position="static" : hero.style.position = "sticky" )
+  window.addEventListener('scroll', _ => window.pageYOffset >= 2400 ?  video.style.position="static" : video.style.position = "sticky" )
   
 // Video play knap
 const playKnap = document.querySelector('.paralax button')
