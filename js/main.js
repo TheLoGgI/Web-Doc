@@ -34,14 +34,17 @@ setInterval(function() {
 
 // Hide hero video
   const hero = document.querySelector('.hero')
-window.addEventListener('scroll', _ => window.pageYOffset >= window.innerHeight ?  hero.style.position="static" : hero.style.position = "sticky" )
-
-// Video play
+  const video = document.querySelector('#video')
+  
+  window.addEventListener('scroll', _ => window.pageYOffset >= window.innerHeight ?  hero.style.position="static" : hero.style.position = "sticky" )
+  window.addEventListener('scroll', _ => window.pageYOffset >= window.innerHeight ?  hero.style.position="static" : hero.style.position = "sticky" )
+  
+// Video play knap
 const playKnap = document.querySelector('.paralax button')
-const video = document.querySelector('#video')
+
 
 playKnap.addEventListener('click', event => {
-  console.log(video.paused);
+
   if (video.paused) {
     video.play()
     playKnap.textContent = '⏸'
@@ -51,3 +54,32 @@ playKnap.addEventListener('click', event => {
   }
   
 })
+
+// Check for in view
+let options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.8
+}
+
+
+let callback = (entries, observer) => { 
+  entries.forEach(entry => {
+
+    // Hvis vidoen er stoppet
+    if (video.paused) {
+      // afspil videoen
+      video.play()
+      video.muted = false
+    } 
+    
+    // Hvis videoen ikke kan ses, stop den
+    if (!entry.isIntersecting) {
+      video.pause()
+    }
+ 
+  });
+};
+
+let observer = new IntersectionObserver(callback, options);
+observer.observe(video);
