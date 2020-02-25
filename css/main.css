@@ -60,6 +60,7 @@ body {
   top: 30vh;
 
   animation: hop-up-ned 1s ease-in 3s infinite alternate;
+  -webkit-animation: hop-up-ned 1s ease-in 3s infinite alternate;
 }
 
 #video {

@@ -32,12 +32,18 @@ setInterval(function() {
   plusSlides(1)
 }, 5000)
 
+function getElementPageHeight(id) {
+ return document.getElementById(id).getBoundingClientRect().y
+
+
+}
+
 // Hide hero video
   const hero = document.querySelector('.hero')
   const video = document.querySelector('#video')
 
   window.addEventListener('scroll', _ => window.pageYOffset >= window.innerHeight ?  hero.style.position="static" : hero.style.position = "sticky" )
-  window.addEventListener('scroll', _ => window.pageYOffset >= 2400 ?  video.style.position="static" : video.style.position = "sticky" )
+  window.addEventListener('scroll', _ => getElementPageHeight('bruger') <= 200 ?  video.style.position="static" : video.style.position = "sticky" )
   
 // Video play knap
 const playKnap = document.querySelector('.paralax button')
@@ -59,7 +65,7 @@ playKnap.addEventListener('click', event => {
 let options = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.8
+  threshold: 0.6
 }
 
 
